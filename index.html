@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* NAVIGATION */
+      nav {
+        width: 100%;
+        background-color: transparent;
+        height: 70px;
+      }
+
+      nav > a h3 {
+        float: left;
+        font-family: "Fjalla One", sans-serif;
+        color: #ffffff;
+        font-size: 28px;
+        letter-spacing: 2px;
+        margin: 20px 30px;
+      }
+
+      .link1 {
+        /* border: 1px solid #ffffff; */
+        width: fit-content;
+        float: left;
+      }
+
+      .link1 li {
+        margin: 25px 0 0 0px;
+        display: inline-block;
+        list-style-type: none;
+      }
+
+      .link1 li a {
+        text-decoration: none;
+        font-family: "Fjalla One", sans-serif;
+        color: #ffffff;
+        margin-left: 40px;
+        transition: 0.2s ease-in-out;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        padding: 5px 0;
+      }
+
+      .link1 li a:hover {
+        color: #ffffff;
+        border-top: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+      }
+
+      #current {
+        padding: 5px 0;
+        border-top: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        color: #ffffff;
+      }
+      /* Header */
+      .picture blockquote {
+        text-align: center;
+        font-family: "LEMON MILK";
+        color: #ffffff;
+        font-size: 50px;
+        padding-top: 70px;
+      }
+      .picture {
+        background-image: url(black-bg.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        height: 750px;
+        width: 100%;
+      }
+
+      .About {
+        padding: 70px 0 0 70px;
+      }
+
+      .About h3 {
+        color: #ffffff;
+        font-family: "Lemon Milk";
+        padding: 10px 0 10px 0;
+      }
+
+      .About Cite {
+        color: #ffffff;
+        font-family: "Georgia";
+        font-size: 15px;
+        font-style: normal;
+      }
+
+      /* Skills */
+      .Skills {
+        display: grid;
+        grid-template-columns: 530px 1fr 1fr;
+        grid-template-areas: "picture essay essay";
+        height: 750px;
+      }
+
+      .skills-picture {
+        grid-area: picture;
+        padding: 75px 0 0 150px;
+      }
+
+      .skills-picture h1 {
+        font-family: "Lemon Milk";
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        font-size: 50px;
+      }
+
+      .skills-picture .simg1 {
+        width: 200px;
+      }
+      .skills-picture .simg2 {
+        width: 150px;
+        /* float: right; */
+      }
+      .skills-picture .simg3 {
+        width: 300px;
+      }
+
+      .skill-essay {
+        grid-column-end: three;
+        grid-area: essay;
+      }
+
+      .skills-essay p {
+        width: 800px;
+        font-family: Georgia;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: justify;
+        margin: 160px 0 0 10px;
+        text-indent: 3em;
+      }
+      /* Habits */
+      .Habits {
+        display: grid;
+        grid-template-columns: 530px 1fr 1fr;
+        grid-template-areas: "essay essay picture";
+        height: 750px;
+        background-color: #1b1d1c;
+      }
+
+      .Habits-picture {
+        grid-area: picture;
+        padding: 75px 180px 0 0;
+      }
+
+      .Habits-picture h1 {
+        font-family: "Lemon Milk";
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        font-size: 50px;
+        color: #ffffff;
+      }
+
+      .Habits-picture .Habits1 {
+        width: 150px;
+      }
+
+      .Habits-picture .Habits2 {
+        width: 350px;
+        float: right;
+      }
+
+      .Habits-picture .Habits3 {
+        width: 195px;
+      }
+
+      .Habits-essay {
+        grid-area: essay;
+      }
+
+      .Habits-essay p {
+        width: 800px;
+        font-family: Georgia;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: justify;
+        margin: 160px 0 0 150px;
+        text-indent: 3em;
+        color: #ffffff;
+      }
+      /* Interest */
+      .Interest {
+        display: grid;
+        grid-template-columns: 530px 1fr 1fr;
+        grid-template-areas: "picture essay essay";
+        height: 750px;
+      }
+
+      .Interest-picture {
+        grid-area: picture;
+        padding: 75px 0 0 150px;
+      }
+
+      .Interest-picture h1 {
+        font-family: "Lemon Milk";
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        font-size: 50px;
+      }
+
+      .Interest-picture .interest1 {
+        width: 180px;
+      }
+      .Interest-picture .interest2 {
+        width: 120px;
+      }
+      .Interest-picture .interest3 {
+        width: 300px;
+      }
+
+      .Interest-essay {
+        grid-column-end: three;
+        grid-area: essay;
+      }
+
+      .Interest-essay p {
+        width: 800px;
+        font-family: Georgia;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: justify;
+        margin: 160px 0 0 10px;
+        text-indent: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="picture">
+      <nav id="top">
+        <a href="../index.html"><h3>JELEAZAR P.</h3></a>
+        <ul class="link1">
+          <li><a href="../AutoBiographyModified/index.html">About</a></li>
+          <li><a href="../ResumeModified/Resume.html">Resume</a></li>
+          <li><a href="" id="current">Skills</a></li>
+          <li><a href="../Gallery/gallery.html">Gallery</a></li>
+          <li><a href="../BucketList/index.html">Bucket list</a></li>
+          <li><a href="../Film/index.html">Film </a></li>
+          <li><a href="../Beats/index.html">Beat</a></li>
+          <li><a href="../ImageMap/index.html">Travel</a></li>
+        </ul>
+      </nav>
+      <div class="About">
+        <hr style="background-color: #ffffff; width: 200px; height: 2px" />
+        <h3>JELEAZAR PACOLOR</h3>
+        <hr
+          style="
+            background-color: #ffffff;
+            width: 200px;
+            height: 2px;
+            margin-bottom: 10px;
+          "
+        />
+        <cite
+          >M2: PRELIM - HANDS ON 2 <br />
+          February 17, 2023 <br />
+          CSAD
+        </cite>
+      </div>
+      <blockquote>
+        A Jack of All Trades is A Master<br />of None But Oftentimes Better
+        Than<br />A Master of One
+      </blockquote>
+    </div>
+    <div class="Skills">
+      <div class="skills-picture">
+        <h1>Skills</h1>
+        <a href="Skills.jpg"
+          ><img src="Skills.jpg" alt="skills" class="simg1"
+        /></a>
+        <a href="skills2.jpg"
+          ><img src="skills2.jpg" alt="skills" class="simg2"
+        /></a>
+        <a href="skill3.jpg"
+          ><img src="skill3.jpg" alt="skills" class="simg3"
+        /></a>
+      </div>
+
+      <div class="skills-essay">
+        <p>
+          Developers are essential to maintaining the advancement of technology,
+          which has become a vital part of our daily life. A prospective
+          developer has a limitless range of options: they can design the next
+          game changing smartphone app, invent new gaming worlds, or influence
+          how millions of people connect and communicate online. In the rapidly
+          evolving world of today, a powerful skill set is required. There are
+          two types of skills that I currently hone, hard and soft skills.
+          Fundamental ideas in computer science like data structures and
+          algorithms are thought to be skills that every software developer must
+          possess. The ability to comprehend data structures and algorithms
+          allows developers to create more effective solutions to challenging
+          cases. enable engineers to better understand how to divide large
+          problems into smaller, more manageable components and determine the
+          best solution for each component. This is a crucial problem solving
+          ability that companies strongly value. In terms of soft skills, strong
+          communication abilities are beneficial in all aspects of life,
+          including both the professional and personal spheres as well as
+          everything in between. All transactions, from a commercial
+          perspective, are the outcome of communication. In order for you to
+          absorb information more quickly and precisely as well as for others,
+          you must have effective communication abilities. Nevertheless, those
+          talents are currently being developed for future roles.
+        </p>
+      </div>
+    </div>
+    <div class="Habits">
+      <div class="Habits-picture">
+        <h1>Habits</h1>
+        <a href="Habits.jpg"
+          ><img src="Habits.jpg" alt="Habits1" class="Habits1"
+        /></a>
+        <a href="habits2.jpg"
+          ><img src="habits2.jpg" alt="Habits2" class="Habits2"
+        /></a>
+        <a href="habits3.jpg"
+          ><img src="habits3.jpg" alt="Habits3" class="Habits3"
+        /></a>
+      </div>
+      <div class="Habits-essay">
+        <p>
+          I'm presently reading "atomic habits" by James Clear, who defined
+          habits as the little choices and daily acts you make. Habits,
+          according to Duke University researchers, are responsible for around
+          40% of our daily behaviors. The things you repeatedly do (i.e., the
+          things you spend time thinking about and doing each day) are
+          ultimately what shape who you are, what you believe, and how you come
+          across to others. One of the healthy habits I develop is eating a
+          balanced diet. You are what you eat, according to a popular proverb.
+          Second every Sunday, I evaluate my week. Monitoring your performance
+          and behavior each week on a regular basis is one of the best good
+          habits I formed. If you want to live a life that matters, you must
+          frequently check in with yourself on what you did, where you lacking,
+          and how you performed. Lastly, building a healthy relationship.
+          Positive interpersonal connections with friends, family, and coworkers
+          can enhance general well-being and boost mental health. It also
+          enhances productivity in the workplace. However, let's not keep it
+          professional until the end. I'm also a man seeking a habit like a
+          little boy such as playing games, music, watching movies, date night
+          outs, hangouts, and many more fun activities.
+        </p>
+      </div>
+    </div>
+    <div class="Interest">
+      <div class="Interest-picture">
+        <h1>Interest</h1>
+        <a href="Interest.jpg"
+          ><img src="Interest.jpg" alt="Interest" class="interest1"
+        /></a>
+        <a href="interest2.jpg"
+          ><img src="interest2.jpg" alt="Interest" class="interest2"
+        /></a>
+        <a href="interest3.jpg"
+          ><img src="interest3.jpg" alt="Interest" class="interest3"
+        /></a>
+      </div>
+      <div class="Interest-essay">
+        <p>
+          Professionally and formally speaking, I pursue my career in the field
+          of technology a long way before college. The first time I attended an
+          information communication technology class was in junior high school.
+          I've made the decision to focus on my interests and advance in the
+          development of my talents as a young person who is eager to learn
+          everything there is to know about computers. Those things about the
+          development of things in this area such as video games, robotics,
+          artificial intelligence, and other overwhelming and exciting
+          inventions truly enlighten me. I do, however, have a side that likes
+          things other than my career, just like everyone else. In the art of
+          music, sound, and rhythm are used to produce auditory experiences that
+          can elicit feelings, tell tales, and transmit ideas. It is a universal
+          language that can cut over linguistic, cultural, and social barriers.
+          I adored music for a variety of reasons. It serves as my life's
+          soundtrack, inspiring and motivating. Others use it as a means of
+          self-expression and creativity to investigate their moods and
+          emotions. Additionally, music has the power to unite individuals by
+          fostering a sense of belonging and shared experience. With this kind
+          of love for music, I learned how to play instruments like acoustic
+          guitar, bass guitar, and drums.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
